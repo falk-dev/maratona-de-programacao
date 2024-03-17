@@ -1,3 +1,5 @@
+// 2377 - PEDÁGIO | RESOLVIDO EM C++
+
 #include <iostream>
 
 using namespace std;
