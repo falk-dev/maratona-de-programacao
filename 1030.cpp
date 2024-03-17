@@ -1,4 +1,4 @@
-// 1030 - A LENDA DE JOSEPHUS | RESOLVIDO EM C++
+// 1030 - A LENDA DE JOSEPHUS | RESOLVIDO EM C++ 
 
 #include <iostream>
 

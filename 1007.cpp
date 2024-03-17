@@ -1,4 +1,4 @@
-// 1007 - DIFERENÇA | RESOLVIDO EM C++
+// 1007 - DIFERENÇA | RESOLVIDO EM C++ 
 
 #include <iostream>
 

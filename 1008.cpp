@@ -1,4 +1,4 @@
-// 1008 - SALÁRIO | RESOLVIDO EM C++
+// 1008 - SALÁRIO | RESOLVIDO EM C++ 
 
 #include <iostream>
 #include <iomanip>

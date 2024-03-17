@@ -1,4 +1,4 @@
-// 3053 - JOGO DOS COPOS | RESOLVIDO EM C++
+// 3053 - JOGO DOS COPOS | RESOLVIDO EM C++ 
 #include <iostream>
 
 using namespace std;

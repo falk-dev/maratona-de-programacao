@@ -1,4 +1,4 @@
-// 2434 - SALDO DO VOVÔ | RESOLVIDO EM C++
+// 2434 - SALDO DO VOVÔ | RESOLVIDO EM C++ 
 
 #include <iostream>
 
