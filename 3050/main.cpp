@@ -25,17 +25,21 @@ int main()
 
     for (i = 1; i < X.size(); i++)
     {
-        for (j = 1; j <= N; j++)
+        for (j = i+1; j <= N; j++)
         {
-            aux = X[i] + (abs(X[j] - X[i]) + X[j]);
+            aux = X[i] + (abs(j-i)) + X[j];
 
             if (aux > maior) {
                 maior = aux;
             }
         }
+
     }
 
-    cout << maior << endl;
+    if (N == 1) {
+        cout << X[1];
+    } else {
+    cout << maior << endl;}
 
     return 0;
 }
