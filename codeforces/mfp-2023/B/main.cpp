@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int N = 0, aux = 0;
     vector<int> X;
 
@@ -13,17 +14,20 @@ int main() {
 
     X.resize(N);
 
-    for (int i = 0; i < X.size(); i++) {
+    for (int i = 0; i < X.size(); i++)
+    {
         cin >> X[i];
     }
 
-    int i = 0, j = N;
+    int i = 0, j = N - 1;
 
     sort(X.begin(), X.end());
 
-    while (i < j) {
-        if (X[i] + X[j] / 2 > aux) {
-            aux = (X[i] + X[j] / 2);
+    while (i < j)
+    {
+        if ((X[i] + X[j]) / 2 > aux)
+        {
+            aux = (X[i] + X[j]) / 2;
         }
         i++;
         j--;
