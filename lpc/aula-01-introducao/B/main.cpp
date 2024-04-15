@@ -23,4 +23,6 @@ int main() {
 
         cout << "Case " << i << ": " << X[0] << endl;
     }
+
+    return 0;
 }
