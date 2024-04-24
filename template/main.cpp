@@ -1,13 +1,17 @@
+// xxxx - xxxx | RESOLVIDO EM C++
+// Author: falk.dev
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
 // Printar vector
-#define dbvector(vector)                           \
-    {                                              \
-        cout << #vector << " = ";                  \
-        for (auto& it : vector) cout << it << " "; \
-        cout << endl;                              \
+#define dbvector(vector)          \
+    {                             \
+        cout << #vector << " = "; \
+        for (auto &it : vector)   \
+            cout << it << " ";    \
+        cout << endl;             \
     }
 
 // Fast IO
@@ -24,3 +28,9 @@ typedef long long ll;
 // Pair
 #define f first;
 #define s second;
+
+int main()
+{
+
+    return 0;
+}
