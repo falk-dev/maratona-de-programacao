@@ -11,18 +11,20 @@ int main()
 
     cin >> apelido;
 
-    for (int j = 0; j < apelido.size(); j++)
+    for (int i = 0; i < apelido.size(); i++)
     {
-        apelido[j] = tolower(apelido[j]);
+        apelido[i] = tolower(apelido[i]);
     }
 
-    if (apelido.find(nome))
+    size_t posicao = apelido.find(nome);
+
+    if (posicao != string::npos)
     {
-        cout << "achou" << endl;
+        cout << "Link Bolado" << endl;
     }
     else
     {
-        cout << "nao achou" << endl;
+        cout << "Link Tranquilo" << endl;
     }
 
     return 0;
