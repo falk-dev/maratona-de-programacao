@@ -37,7 +37,8 @@ int main()
 
     while (getline(cin, problema))
     {
-        int aux = 0;
+        int aux = 0, frases = 0;
+
         for (int i = 0; i < problema.size(); i++)
         {
             if (isalpha(problema[i]))
@@ -46,7 +47,13 @@ int main()
             }
         }
 
+        for (int i = 0; i < problema.size(); i++)
+        {
+        }
+
         cout << aux << endl;
+        cout << frases << endl;
+        cout << "---------" << endl;
     }
 
     return 0;
