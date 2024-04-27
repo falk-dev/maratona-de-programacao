@@ -1,4 +1,4 @@
-// 1243 - O QUÃO FÁCIL É... | RESOLVIDO EM C++
+// 2087 - CONJUNTOS BONS E RUINS | RESOLVIDO EM C++
 // Author: falk.dev
 
 #include <bits/stdc++.h>
@@ -33,28 +33,24 @@ int main()
 {
     SPEED;
 
-    string problema;
+    int n_casos;
 
-    while (getline(cin, problema))
+    while (cin >> n_casos, n_casos)
     {
-        int aux = 0, frases = 0;
-
-        for (int i = 0; i < problema.size(); i++)
+        for (int i = 0; i < n_casos, i++)
         {
-            if (isalpha(problema[i]))
+            vector<string> conjunto(n_casos);
+
+            for (int j = 0; j < conjunto.size(); j++)
             {
-                aux++;
+                cin >> conjunto[j];
+            }
+
+            for (int j = 0; j < conjunto.size(); j++)
+            {
+                
             }
         }
-
-        for (int i = 0; i < problema.size(); i++)
-        {
-            
-        }
-
-        cout << aux << endl;
-        cout << frases << endl;
-        cout << "---------" << endl;
     }
 
     return 0;

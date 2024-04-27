@@ -13,8 +13,7 @@
             "cStandard": "c17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "C:/Program Files/CodeBlocks/MinGW/bin/g++.exe",
-            "C_Cpp.clang_format_fallbackstyle": "{ BasedOnStyle: Google, IdentWidth: 4, ColumnLimit: 0 }"
+            "compilerPath": "C:/Program Files/CodeBlocks/MinGW/bin/g++.exe"
         }
     ],
     "version": 4
