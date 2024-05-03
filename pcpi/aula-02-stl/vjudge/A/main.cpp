@@ -1,4 +1,5 @@
-// 1243 - O QUÃO FÁCIL É... | RESOLVIDO EM C++
+// Link da questão: https://vjudge.net/contest/622702#problem/A
+// A - ALIASES | RESOLVIDO EM C++
 // Author: falk.dev
 
 #include <bits/stdc++.h>
@@ -33,29 +34,37 @@ int main()
 {
     SPEED;
 
-    string problema;
+    int n_casos, aux = 0;
+    map<string, int> frequencia;
 
-    while (getline(cin, problema))
+    cin >> n_casos;
+
+    for (int i = 0; i < n_casos; i++)
     {
-        int aux = 0, frases = 0;
+        int n_nomes;
+        string nome, apelido;
 
-        for (int i = 0; i < problema.size(); i++)
+        cin >> n_nomes;
+
+        for (int j = 0; j < n_nomes; j++)
         {
-            if (isalpha(problema[i]))
-            {
-                aux++;
-            }
+            cin >> nome;
+
+            apelido = apelido + nome[0];
         }
 
-        for (int i = 0; i < problema.size(); i++)
-        {
-            
-        }
-
-        cout << aux << endl;
-        cout << frases << endl;
-        cout << "---------" << endl;
+        frequencia[apelido]++;
     }
+
+    for (auto i : frequencia)
+    {
+        if (i.second == 1)
+        {
+            aux++;
+        }
+    }
+
+    cout << aux << endl;
 
     return 0;
 }
