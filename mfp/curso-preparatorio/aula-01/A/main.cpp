@@ -1,7 +1,6 @@
-// Link da questão: 
-// xxxx - xxxx | RESOLVIDO EM C++
+// Link da questão: https://vjudge.net/contest/627204#problem/A
+// A - STAIR, PEAK, OR NEITHER? | RESOLVIDO EM C++
 // Author: falk.dev
-
 
 #include <bits/stdc++.h>
 
@@ -34,6 +33,24 @@ typedef long long ll;
 int main()
 {
     SPEED;
+
+    int n_casos;
+
+    cin >> n_casos;
+
+    for (int i = 0; i < n_casos; i++)
+    {
+        int a, b, c;
+
+        cin >> a >> b >> c;
+
+        if (a < b && b < c)
+            cout << "STAIR" << endl;
+        else if (a < b && b > c)
+            cout << "PEAK" << endl;
+        else
+            cout << "NONE" << endl;
+    }
 
     return 0;
 }
