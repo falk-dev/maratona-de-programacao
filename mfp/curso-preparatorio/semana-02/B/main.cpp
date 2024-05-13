@@ -1,10 +1,9 @@
 /*
-Link da questão: 
-xxxx - xxxx | RESOLVIDO EM C++
+Link da questão: https://vjudge.net/contest/627742#problem/B
+B - DISTINCT NUMBER | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade: 
+Complexidade: O(n log n)
 */
-
 
 #include <bits/stdc++.h>
 
@@ -32,6 +31,20 @@ typedef long long ll;
 int main()
 {
     SPEED;
+
+    int n_casos, aux;
+    set<int> numbers;
+
+    cin >> n_casos;
+
+    for (int i = 0; i < n_casos; i++)
+    {
+        cin >> aux;
+
+        numbers.insert(aux);
+    }
+
+    cout << numbers.size() << endl;
 
     return 0;
 }
