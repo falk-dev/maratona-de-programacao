@@ -32,49 +32,54 @@ int main()
 {
     SPEED;
 
-    int n_casos, soma;
+    bool aux = false;
+    int n_casos, soma, numero;
 
     cin >> n_casos >> soma;
 
-    vector<int> numbers(n_casos + 1);
-    vector<int> numbers_order(n_casos + 1);
+    vector<pair<int, int>> numbers(n_casos + 1);
 
     for (int i = 0; i < n_casos; i++)
     {
-        cin >> numbers[i];
-        numbers_order[i] = numbers[i];
+        cin >> numero;
+        numbers[i] = make_pair(numero, i + 1);
     }
 
-    sort(numbers_order.begin(), numbers_order.end());
+    sort(numbers.begin(), numbers.end());
 
-    int l = 0, r = numbers.size() - 1;
+    int l = 1, r = numbers.size() - 1;
 
     while (l < r)
     {
-        if (numbers_order[l] + numbers_order[r] < soma)
+        if (numbers[l].first + numbers[r].first < soma)
         {
             l++;
         }
-        if (numbers_order[l] + numbers_order[r] > soma)
+        else if (numbers[l].first + numbers[r].first > soma)
         {
             r--;
         }
-        if (numbers_order[l] + numbers_order[r] == soma)
+        else if (numbers[l].first + numbers[r].first == soma)
         {
-            for (int i = 0; i < n_casos; i++)
-            {
-                if (numbers[i] == numbers_order[l])
-                {
-                    cout << i + 1 << " ";
-                }
-                else if (numbers[i] == numbers_order[r])
-                {
-                    cout << i + 1 << " ";
-                }
-            }
-            cout << endl;
+            aux = true;
             break;
         }
+    }
+
+    if (aux == true)
+    {
+        if (numbers[l].second < numbers[r].second)
+        {
+            cout << numbers[l].second << " " << numbers[r].second << endl;
+        }
+        else
+        {
+            cout << numbers[r].second << " " << numbers[l].second << endl;
+        }
+    }
+    else
+    {
+        cout << "IMPOSSIBLE" << endl;
     }
 
     return 0;
