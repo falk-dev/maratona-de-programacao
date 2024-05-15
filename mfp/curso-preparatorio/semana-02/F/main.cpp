@@ -36,30 +36,43 @@ int main()
 
     cin >> n_casos >> soma;
 
-    vector<int> numbers(n_casos+1);
+    vector<int> numbers(n_casos + 1);
+    vector<int> numbers_order(n_casos + 1);
 
     for (int i = 0; i < n_casos; i++)
     {
         cin >> numbers[i];
+        numbers_order[i] = numbers[i];
     }
 
-    sort(numbers.begin(), numbers.end());
+    sort(numbers_order.begin(), numbers_order.end());
 
-    int l = 1, r = numbers.size() - 1;
+    int l = 0, r = numbers.size() - 1;
 
     while (l < r)
     {
-        if (numbers[l] + numbers[r] < soma)
+        if (numbers_order[l] + numbers_order[r] < soma)
         {
             l++;
-            if (numbers[l] + numbers[r] > soma)
-            {
-                r--;
-            }
         }
-        else
+        if (numbers_order[l] + numbers_order[r] > soma)
         {
-            cout << l << " " << r << endl;
+            r--;
+        }
+        if (numbers_order[l] + numbers_order[r] == soma)
+        {
+            for (int i = 0; i < n_casos; i++)
+            {
+                if (numbers[i] == numbers_order[l])
+                {
+                    cout << i + 1 << " ";
+                }
+                else if (numbers[i] == numbers_order[r])
+                {
+                    cout << i + 1 << " ";
+                }
+            }
+            cout << endl;
             break;
         }
     }
