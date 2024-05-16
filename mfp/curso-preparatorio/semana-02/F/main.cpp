@@ -2,7 +2,7 @@
 Link da questão: https://vjudge.net/contest/627742#problem/F
 F - xxxx | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade:
+Complexidade: O(n log n)
 */
 
 #include <bits/stdc++.h>
