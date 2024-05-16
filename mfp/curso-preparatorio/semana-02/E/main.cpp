@@ -2,7 +2,7 @@
 Link da questão: https://vjudge.net/contest/627742#problem/E
 E - MEDIAN OF AN ARRAY | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade:
+Complexidade: O (x * n log n) (x == n_casos)
 */
 
 #include <bits/stdc++.h>
