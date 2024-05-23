@@ -2,7 +2,7 @@
 Link da questão: https://judge.beecrowd.com/pt/problems/view/2396
 2396 - CORRIDA | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade:
+Complexidade: O(N²)
 */
 
 #include <bits/stdc++.h>
