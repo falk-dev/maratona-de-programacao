@@ -2,7 +2,7 @@
 Link da questão: https://vjudge.net/contest/629594#problem/A
 A - STATIC RANGE SUM QUERIES | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade: O(N)
+Complexidade: O(N) 
 */
 
 
