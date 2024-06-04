@@ -1,7 +1,7 @@
 {
     "files.associations": {
-        "out1": "code-text-binary",
         "*.embeddedhtml": "html",
+        "out1": "code-text-binary",
         "iostream": "cpp",
         "iomanip": "cpp",
         "ostream": "cpp",
@@ -74,7 +74,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "stdin": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "cSpell.words": [
