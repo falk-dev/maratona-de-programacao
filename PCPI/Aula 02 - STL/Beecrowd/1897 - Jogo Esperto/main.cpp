@@ -1,10 +1,9 @@
 /*
-Link da questão: https://judge.beecrowd.com/pt/problems/view/1897
+Link da questão: https://judge.beecrowd.com/pt/problems/view/2406
 1897 - JOGO ESPERTO | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade: 
+Complexidade:
 */
-
 
 #include <bits/stdc++.h>
 
@@ -29,30 +28,40 @@ typedef long long ll;
 #define f first;
 #define s second;
 
-int main()
-{
+int main() {
     SPEED;
-    queue<pair<int,int>> operations;
-    pair<int, int> par_frente;
-    int n, m, i = 1;
+
+    ll n, m;
+    queue<pair<ll, ll>> operacoes;
+    set<int> memo;
 
     cin >> n >> m;
 
-    operations.push ({n * 2});
-    operations.push ({n * 3});
-    operations.push ({n / 2});
-    operations.push ({n / 3});
-    operations.push ({n + 7});
-    operations.push ({n - 7});
+    operacoes.push({0, n});
 
-   
+    pair<ll, ll> frente = operacoes.front();
 
-    // while (par_frente.second != m) {
-        
+    while (frente.second != m) {
+        frente = operacoes.front();
 
-    //     i++;
-    // }
+        if (memo.find(frente.second) != memo.end()) {
+            operacoes.pop();
+            continue;
+        }
 
+        operacoes.push({frente.first + 1, frente.second * 2});
+        operacoes.push({frente.first + 1, frente.second * 3});
+        operacoes.push({frente.first + 1, frente.second / 2});
+        operacoes.push({frente.first + 1, frente.second / 3});
+        operacoes.push({frente.first + 1, frente.second + 7});
+        operacoes.push({frente.first + 1, frente.second - 7});
 
-    return 0;
+        memo.insert(frente.second);
+
+        operacoes.pop();
+    }
+
+    frente = operacoes.front();
+
+    cout << frente.first << endl;
 }
