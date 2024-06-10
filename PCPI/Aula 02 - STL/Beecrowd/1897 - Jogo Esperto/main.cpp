@@ -1,5 +1,5 @@
 /*
-Link da questão: https://judge.beecrowd.com/pt/problems/view/2406
+Link da questão: https://judge.beecrowd.com/pt/problems/view/1897
 1897 - JOGO ESPERTO | RESOLVIDO EM C++
 Author: falk.dev
 Complexidade:
@@ -64,4 +64,6 @@ int main() {
     frente = operacoes.front();
 
     cout << frente.first << endl;
+
+    return 0;
 }
