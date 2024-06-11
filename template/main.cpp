@@ -15,8 +15,6 @@ using namespace std;
 
 #define dbg(x) cout << #x << " = " << x << endl;
 
-#define db_pair(x) cout << #x << ": " << x.f << ", " << x.s << endl;
-
 #define dbvector(vector)          \
     {                             \
         cout << #vector << " = "; \
@@ -25,15 +23,24 @@ using namespace std;
         cout << endl;             \
     }
 
-#define print_map(map)                      \
+#define dbmap(map)                      \
     for (auto e : map)                      \
         cout << e.first << " " << e.second; \
     cout << endl;
 
 typedef long long ll;
 
+typedef pair<int, int> pii; 
+typedef pair<ll, ll> pll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+typedef long double ld;
+typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
+
 #define f first;
 #define s second;
+
+#define db_pair(x) cout << #x << ": " << x.first << ", " << x.second << endl;
 
 int main()
 {
