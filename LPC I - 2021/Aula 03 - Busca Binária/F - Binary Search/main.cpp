@@ -1,8 +1,7 @@
 /*
 Link da questão:
-xxxx - xxxx | RESOLVIDO EM C++
+F - Binary Search | RESOLVIDO EM C++
 Author: falk.dev
-Complexidade:
 */
 
 #include <bits/stdc++.h>
@@ -35,16 +34,60 @@ typedef pair<ll, ll> pll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef long double ld;
-typedef priority_queue<pii, vector<pii>, greater<pii> > pq_min;
+typedef priority_queue<pii, vector<pii>, greater<pii>> min_pq;
 
 #define f first;
 #define s second;
 
 #define db_pair(x) cout << #x << ": " << x.first << ", " << x.second << endl;
 
+int busca_binaria(vi &vetor, int alvo) {
+    ll l = 0, r = vetor.size(), mid;
+
+    while (l <= r) {
+        mid = l + (r - l) / 2;
+
+        if (vetor[mid] == alvo) {
+            return mid;
+        }
+
+        if (vetor[mid] < alvo) {
+            l = mid + 1;
+        }
+        else {
+            r = mid - 1;
+        }
+    }
+    
+    return -1;
+}
+
 int main()
 {
     SPEED;
+
+    int tam_vector, qtd_testes;
+
+    cin >> tam_vector >> qtd_testes;
+
+    vi nums(tam_vector);
+
+    for (int i = 0; i < tam_vector; i++) {
+        cin >> nums[i];
+    }
+
+    for (int i = 0; i < qtd_testes; i++) {
+        int alvo; cin >> alvo;
+
+        bool resp = binary_search(nums.begin(), nums.end(), alvo);
+
+        if (resp) {
+            cout << "YES" << endl;
+        }
+        else {
+            cout << "NO" << endl;
+        }
+    }
 
     return 0;
 }

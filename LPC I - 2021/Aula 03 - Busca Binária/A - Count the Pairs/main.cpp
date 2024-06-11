@@ -1,6 +1,6 @@
 /*
-Link da questão:
-xxxx - xxxx | RESOLVIDO EM C++
+Link da questão: https://vjudge.net/contest/434572#problem/A
+A - COUNT THE PAIRS | RESOLVIDO EM C++
 Author: falk.dev
 Complexidade:
 */
@@ -42,9 +42,55 @@ typedef priority_queue<pii, vector<pii>, greater<pii> > pq_min;
 
 #define db_pair(x) cout << #x << ": " << x.first << ", " << x.second << endl;
 
+int busca_binaria(vi &vetor, int alvo) {
+    ll l = 0, r = vetor.size(), mid;
+
+    while (l <= r) {
+        mid = l + (r - l) / 2;
+
+        if (vetor[mid] == alvo) {
+            return mid;
+        }
+
+        if (vetor[mid] < alvo) {
+            l = mid + 1;
+        }
+        else {
+            r = mid - 1;
+        }
+    }
+    
+    return -1;
+}
+
 int main()
 {
     SPEED;
+
+    int n_inteiros, diferenca, aux = 0, alvo;
+
+    cin >> n_inteiros >> diferenca;
+
+    vi numeros(n_inteiros);
+
+    for (int i = 0; i < n_inteiros; i++) {
+        cin >> numeros[i];
+    }
+
+    sort(numeros.begin(), numeros.end());
+
+
+    for (int i = 0; i < n_inteiros; i++) {
+        alvo = numeros[i] - diferenca;
+
+        int resp = busca_binaria(numeros, alvo);
+
+        if (resp != -1) {
+            aux++;
+        }
+    }
+
+    cout << aux << endl;
 
     return 0;
 }

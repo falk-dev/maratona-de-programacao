@@ -1,6 +1,6 @@
 /*
 Link da questão:
-xxxx - xxxx | RESOLVIDO EM C++
+1025 - ONDE ESTÁ O MÁRMORE? | RESOLVIDO EM C++
 Author: falk.dev
 Complexidade:
 */
