@@ -1,6 +1,6 @@
 /*
  *  Link da questão: https://codeforces.com/contest/149/problem/A
- *  A - BUSINESS TRIP | RESOLVIDO EM C++
+ *  149A - BUSINESS TRIP | RESOLVIDO EM C++
  *  Author: falk.dev
  *  [STL] - Sort
  */
