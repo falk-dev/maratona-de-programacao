@@ -1,8 +1,8 @@
 /*
- *  Link da questão: https://usaco.org/index.php?page=viewproblem2&cpid=567
- *  567 - FENCE PAINTING | RESOLVIDO EM C++
+ *  Link da questão:
+ *  xxxx - xxxx | RESOLVIDO EM C++
  *  Author: falk.dev
- *  [STL] vector, for
+ *
  */
 
 #include <bits/stdc++.h>
@@ -44,33 +44,21 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 
 int main()
 {
-    freopen("paint.in", "r", stdin);
-    freopen("paint.out", "w", stdout);
+    // freopen("teleport.in", "r", stdin);
+    // freopen("teleport.out", "w", stdout);
 
     SPEED;
 
-    vector<int> pinturas(101);
-    int fazendeiro_inicio, fazendeiro_final, vaca_inicio, vaca_final, aux = 0;
+    int inicio, fim, tel1, tel2, calculo, calculo1, calculo2;
 
-    cin >> fazendeiro_inicio >> fazendeiro_final;
+    cin >> inicio >> fim >> tel1 >> tel2;
 
-    cin >> vaca_inicio >> vaca_final;
+    calculo1 = fim - inicio;
+    calculo2 = abs(inicio - tel1) + abs(fim - tel2);
 
-    for (int i = fazendeiro_inicio; i < fazendeiro_final; i++) {
-        pinturas[i]++;
-    }
+    calculo = min(calculo1, calculo2);
 
-    for (int i = vaca_inicio; i < vaca_final; i++) {
-        pinturas[i]++;
-    }
-
-    for (int i = 0; i < pinturas.size(); i++) {
-        if (pinturas[i] >= 1) {
-            aux++;
-        }
-    }
-
-    cout << aux << endl;
+    cout << calculo << endl;
 
     return 0;
 }
