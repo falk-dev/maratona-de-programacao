@@ -44,19 +44,33 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 
 int main()
 {
+    freopen("paint.in", "r", stdin);
+    freopen("paint.out", "w", stdout);
+
     SPEED;
-    int bf, ff, bv, fv, aux = 0;
 
-    cin >> bf >> ff;
+    vector<int> pinturas(101);
+    int fazendeiro_inicio, fazendeiro_final, vaca_inicio, vaca_final, aux = 0;
 
-    cin >> bv >> fv;
+    cin >> fazendeiro_inicio >> fazendeiro_final;
 
-    int menor = min(bf, bv);
-    int maior = max(ff, fv);
+    cin >> vaca_inicio >> vaca_final;
 
-    int resultado = maior - menor;
+    for (int i = fazendeiro_inicio; i < fazendeiro_final; i++) {
+        pinturas[i]++;
+    }
 
-    cout << resultado << endl;
+    for (int i = vaca_inicio; i < vaca_final; i++) {
+        pinturas[i]++;
+    }
+
+    for (int i = 0; i < pinturas.size(); i++) {
+        if (pinturas[i] >= 1) {
+            aux++;
+        }
+    }
+
+    cout << aux << endl;
 
     return 0;
 }
