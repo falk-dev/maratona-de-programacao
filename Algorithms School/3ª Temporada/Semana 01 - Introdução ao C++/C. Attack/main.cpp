@@ -1,6 +1,6 @@
 /*
- *  Link da questão:
- *  xxxx - xxxx | RESOLVIDO EM C++
+ *  Link da questão: https://vjudge.net/contest/642564#problem/C
+ *  C - ATTACK | RESOLVIDO EM C++
  *  Author: falk.dev
  *
  */
@@ -42,23 +42,19 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 
 #define db_pair(x) cout << #x << ": " << x.first << ", " << x.second << endl;
 
-int main()
-{
-    // freopen("teleport.in", "r", stdin);
-    // freopen("teleport.out", "w", stdout);
-
+int main() {
     SPEED;
 
-    int inicio, fim, tel1, tel2, calculo, calculo1, calculo2;
+    ll a, b, i = 0;
 
-    cin >> inicio >> fim >> tel1 >> tel2;
+    cin >> a >> b;
 
-    calculo1 = fim - inicio;
-    calculo2 = abs(inicio - tel1) + abs(fim - tel2);
+    // while (a > 0) {
+    //     a -= b;
+    //     i++;
+    // }
 
-    calculo = min(calculo1, calculo2);
-
-    cout << calculo << endl;
+    cout << a / b << endl;
 
     return 0;
 }
