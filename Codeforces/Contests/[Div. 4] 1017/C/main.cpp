@@ -45,5 +45,34 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 int main() {
     SPEED;
 
+    int casos;
+    cin >> casos;
+
+    while (casos--) {
+        int n;
+        cin >> n;
+
+        vector<vi> vetor(n, vi(n));
+        map<int, int> p;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                cin >> vetor[i][j];
+
+                dbg(i + j + 2);
+                p[i + j + 2] = vetor[i][j];
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                cout << vetor[i][j] << " ";
+            }
+            cout << endl;
+        }
+
+        dbmap(p);
+    }
+
     return 0;
 }

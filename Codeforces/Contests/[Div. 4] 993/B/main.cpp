@@ -45,5 +45,27 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 int main() {
     SPEED;
 
+    int n_casos;
+
+    cin >> n_casos;
+
+    while (n_casos--) {
+        string palavra, palavra_nova = "";
+
+        cin >> palavra;
+
+        for (int i = palavra.size() - 1; i >= 0; i--) {
+            if (palavra[i] == 'q') {
+                palavra_nova += "p";
+            } else if (palavra[i] == 'p') {
+                palavra_nova += "q";
+            } else {
+                palavra_nova += "w";
+            }
+        }
+
+        cout << palavra_nova << endl;
+    }
+
     return 0;
 }

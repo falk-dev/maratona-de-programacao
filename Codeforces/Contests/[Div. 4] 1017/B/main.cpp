@@ -45,5 +45,32 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 int main() {
     SPEED;
 
+    int casos, qtd_dias, pode_estar_infectado_dia, l, r;
+    cin >> casos;
+
+    for (int i = 0; i < casos; i++) {
+        cin >> qtd_dias >> pode_estar_infectado_dia >> l >> r;
+
+        int aux_l = 0, aux_r = 0;
+
+        for (int j = 0; j < pode_estar_infectado_dia; j++) {
+            if (j % 2 == 0) {
+                if ((aux_r + 1) <= r) {
+                    aux_r++;
+                } else {
+                    aux_l--;
+                }
+            } else {
+                if ((aux_l - 1) >= l) {
+                    aux_l--;
+                } else {
+                    aux_r++;
+                }
+            }
+        }
+
+        cout << aux_l << " " << aux_r << endl;
+    }
+
     return 0;
 }

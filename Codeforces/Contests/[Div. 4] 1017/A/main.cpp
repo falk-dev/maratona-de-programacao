@@ -2,7 +2,7 @@
  *  Link da questão:
  *  xxxx - xxxx | RESOLVIDO EM C++
  *  Author: falk.dev
- *
+ *  string, for
  */
 
 #include <bits/stdc++.h>
@@ -44,6 +44,25 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 
 int main() {
     SPEED;
+
+    int casos_teste;
+    cin >> casos_teste;
+    cin.ignore();
+
+    for (int i = 0; i < casos_teste; i++) {
+        string pais, nome_pais = "";
+        getline(cin, pais);
+
+        nome_pais = pais[0];
+
+        for (int j = 1; j < pais.size(); j++) {
+            if (pais[j] == ' ') {
+                nome_pais += pais[j + 1];
+            }
+        }
+
+        cout << nome_pais << endl;
+    }
 
     return 0;
 }

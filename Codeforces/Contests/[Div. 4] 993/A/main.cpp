@@ -45,5 +45,16 @@ typedef priority_queue<pii, vector<pii>, greater<pii>> pq_min;
 int main() {
     SPEED;
 
+    int n_casos;
+
+    cin >> n_casos;
+
+    while (n_casos--) {
+        int num;
+        cin >> num;
+
+        cout << num - 1 << endl;
+    }
+
     return 0;
 }
